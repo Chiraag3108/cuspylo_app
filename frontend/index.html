@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b2545">
+<title>CUSPYLO — The Pie Product</title>
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="nav">
+  <a class="brand" href="#" onclick="go('dash');return false"><img src="logo.png" alt="CUSPYLO — The Pie Product"></a>
+  <nav>
+    <button class="ic" onclick="go('cart')" aria-label="Cart">🛒<b id="cc">0</b></button>
+    <span id="who"></span>
+  </nav>
+</header>
+<main id="app" aria-live="polite"></main>
+<footer id="contact">
+  <div class="fgrid">
+    <div><h3>Contact CUSPYLO</h3><p>Questions about an order? Message us.</p>
+      <a id="wa2" class="btn wa" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <p class="mut" id="em"></p><p class="mut">Cash on delivery · UPI coming soon</p></div>
+    <form id="fb"><h3>Send feedback</h3>
+      <input name="name" placeholder="Your name (optional)"><input name="contact" placeholder="Phone or email (optional)">
+      <textarea name="message" rows="3" placeholder="What can we do better?" required></textarea>
+      <button class="btn">Send feedback</button></form>
+  </div>
+  <p class="mut c">© CUSPYLO · Made for KCDS · <a href="#" onclick="go('admin');return false">Admin</a></p>
+</footer>
+<a id="wa" class="float" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<div id="toast" role="status"></div>
+<script src="/config.js"></script>
+<script src="/app.js"></script></body></html>
