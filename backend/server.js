@@ -13,7 +13,7 @@ if (!C.secret || !C.admin.id || !C.admin.password) {
   );
 }
 const app = express();
-const DB = path.join(__dirname, 'data.json');
+const DB = process.env.DATA_FILE || path.join(__dirname, 'data.json');
 
 const EMPTY = () => ({
   users: [],
@@ -423,12 +423,8 @@ app.get('*', (_req, res) => {
 });
 
 // Start server
-app.listen(C.port, '127.0.0.1', () => {
-  console.log(
-    `CUSPYLO is running at http://127.0.0.1:${C.port}`
-  );
+app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
+  console.log(`CUSPYLO is running on port ${process.env.PORT || 3000}`);
   console.log(`Admin ID: ${C.admin.id}`);
-  console.log(
-    'Admin password: configured in backend/config.js'
-  );
+  console.log('Admin credentials loaded securely.');
 });
