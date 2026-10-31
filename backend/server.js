@@ -425,6 +425,5 @@ app.get('*', (_req, res) => {
 // Start server
 app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
   console.log(`CUSPYLO is running on port ${process.env.PORT || 3000}`);
-  console.log(`Admin ID: ${C.admin.id}`);
   console.log('Admin credentials loaded securely.');
 });
